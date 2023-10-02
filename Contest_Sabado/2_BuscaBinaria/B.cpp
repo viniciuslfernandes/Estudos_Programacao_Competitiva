@@ -1,36 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef unsigned long long ull;
+typedef long long ll;
 
-ull buscaB(ull a);
+ll buscaB(ll a);
 
-vector <ull> vet;
+vector <ll> vet;
 int main(){
 
-    ull x;
-    ull n, q;
-    cin>>n>>q;
-    for(ull i=0; i<n; i++){
+    ll n, q; cin>>n>>q; 
+    ll x;
+    for(ll i=0; i<n; i++){
         cin>>x;
         vet.push_back(x);
     }
-    sort(vet.begin(), vet.end());
-    for(ull i=0; i<q; i++){
+    
+    for(ll i=0; i<q; i++){
         cin>>x;
-        cout<<buscaB(x)<<endl;
+        x=buscaB(x);
+        cout<<x<<endl;
     }
     
     return 0; 
 }
 
-ull buscaB(ull a){
-
-    ull ini = 0;
-    ull fim = vet.size() - 1;
-
+ll buscaB(ll a){
+    ll ini = 0;
+    ll fim = vet.size() - 1;
     while (ini <= fim) {
-        ull meio = ini + (fim - ini) / 2;
-
+        ll meio = ini + (fim - ini) / 2;
         if (vet[meio] == a) {
             return meio; 
         } else if (vet[meio] < a) {
@@ -39,6 +36,5 @@ ull buscaB(ull a){
             fim = meio - 1;
         }
     }
-
     return -1; 
 }
