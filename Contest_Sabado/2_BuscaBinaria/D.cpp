@@ -14,10 +14,16 @@ int main(){
     for(auto it=m.begin(); it!=m.end(); it++){
         int a = x - it->first;
         if(m.find(a)!=m.end()){
-            if()
+            if(it->second<m[a]){
+                cout<<it->second<<" "<<m[a]<<endl;
+                return 0;
+            }else{
+                cout<<m[a]<<" "<<it->second<<endl;
+                return 0;
+            } 
         }
 
     }
-    //cout<<"IMPOSSIBLE"<<endl;
+    cout<<"IMPOSSIBLE"<<endl;
     return 0;
 }

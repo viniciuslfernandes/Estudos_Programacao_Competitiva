@@ -15,12 +15,12 @@ int main(){
         }
     }
     
-    for(int i=0; i<q; i++){
+    while(q--){
         int a; cin>>a;
         if(v.find(a)!=v.end()){
             cout<<v[a]<<endl;
         }else{
-            cout<<"-1"<<endl;
+            cout<<-1<<endl;
         }
     }
 
