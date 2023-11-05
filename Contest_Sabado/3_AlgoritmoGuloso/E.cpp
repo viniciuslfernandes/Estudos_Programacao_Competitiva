@@ -4,23 +4,20 @@ int main(){
 
     int t; cin>>t;
     while(t--){
-        int n, q; cin>>n>>q;
-        vector<int>vet(n);
+        int n; cin>>n;
+        int aux;
+        set <int> x;
         for(int i=0; i<n; i++){
-            cin>>vet[i];
+            cin>>aux;
+            x.insert(aux);
         }
-        sort(vet.begin(), vet.end());
-        for(int i=0; i<q; i++){
-            int aux; cin>>aux;
-            int lw= lower_bound(vet.begin(), vet.end(), aux)-vet.begin();
-            int som=0, cont=0; 
-            for(int i=lw; i<n or aux==0; i++){
-                cont= aux/vet[i];
-                som+=cont;
-                aux-=cont*vet[i];
-            }
-            cout<<som<<endl;
+        if((n-x.size())%2 ==0){
+            cout<<(x.size())<<endl;
+        }else{
+            cout<<(x.size()-1)<<endl;
         }
+
     }
     return 0;
 }
+/*FEITO*/
