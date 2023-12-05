@@ -12,17 +12,17 @@ int main(){
     ll sum=0;
     for(int i=1; i<=n; i++){
         cin>>vet[i];
-        if(vet[i]%2==0) sum++;
-        vet[i]=vet[i]+vet[i-1];
-        if(vet[i]%n==0) sum++;
+        vet[i]=(vet[i]+vet[i-1]);
     }
 
-    for(int i=2, j=1; i<=n;){
-        
-    }   
+    for(int i=0, j=1; i<=n;){
+        if(abs(vet[j]-vet[i])%n==0){
+            sum++;
+        }
+    }
+    
     cout<<sum<<endl;
 
     return 0;
 }
-
 
