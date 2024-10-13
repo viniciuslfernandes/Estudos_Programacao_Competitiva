@@ -60,4 +60,4 @@ int main(){
     }
     return 0;
 }
-//https://www.beecrowd.com.br/judge/en/problems/view/1022
+//www.beecrowd.com.br/judge/en/problems/view/1022
